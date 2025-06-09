@@ -1,5 +1,8 @@
 ## Бодлого-3
 Бодлогын нэр: Forming a magic square
+
+🔗 Hackerrank холбоос: https://www.hackerrank.com/challenges/magic-square-forming/problem?isFullScreen=true
+
 #### Бодлогын өгөгдөл:
 
 Бид "ид шидийн квадрат" (magic square) гэж дараах нөхцөлийг хангасан матрицыг хэлнэ:
