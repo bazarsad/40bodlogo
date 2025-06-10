@@ -21,4 +21,4 @@
 - 3 мөр, тус бүр 3 ширхэг интервалын тусламжтайгаар тусгаарлагдсан бүхэл тоонууд.
 
 #### Hackerrank-ийн амжилтын screenshot:
-![Screenshot 2025-06-09 194755](https://github.com/user-attachments/assets/0a3cdc81-398c-4b40-9def-de5e95011216)
+![Screenshot 2025-06-10 120137](https://github.com/user-attachments/assets/0c018189-627d-4515-8e53-679cfb6740d1)
