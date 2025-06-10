@@ -32,4 +32,4 @@ X X X
 - Дараагийн n мөр бүрт m ширхэг 0 эсвэл 1 зайгаар тусгаарлагдсан байдлаар өгөгдөнө
 
 #### Hackerrank-ийн амжилтын screenshot:
-![Screenshot 2025-06-08 195900](https://github.com/user-attachments/assets/85d1d107-1ae7-4a92-8db0-738decfe65de)
+![Screenshot 2025-06-10 115944](https://github.com/user-attachments/assets/7c2ca8ee-2b4b-4783-992c-e4da989131ae)
