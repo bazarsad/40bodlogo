@@ -21,5 +21,4 @@
 - Дараагийн T мөр бүрд нэг үг байна.
 
 #### Hackerrank-ийн амжилтын screenshot:
-![Screenshot 2025-06-08 210800](https://github.com/user-attachments/assets/41f062f4-7906-4133-97b3-3d45a8dba048)
-
+![Screenshot 2025-06-10 120242](https://github.com/user-attachments/assets/c08a731b-852f-48bf-9c8c-66b5ceead42b)
