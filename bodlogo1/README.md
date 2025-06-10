@@ -27,4 +27,4 @@
 
 
 #### Hackerrank-ийн амжилтын screenshot:
-![Screenshot 2025-06-08 192410](https://github.com/user-attachments/assets/a50c86ab-6d59-4ec1-9dd1-193867f80497)
+![Screenshot 2025-06-09 194755](https://github.com/user-attachments/assets/5ed0b041-a3b5-4b74-b431-34fcf3883591)
