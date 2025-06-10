@@ -1,6 +1,13 @@
 import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
 import java.util.*;
+import java.util.concurrent.*;
+import java.util.function.*;
+import java.util.regex.*;
 import java.util.stream.*;
+import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
 
 class Result {
@@ -12,26 +19,31 @@ class Result {
      * The function accepts INTEGER_ARRAY h as parameter.
      */
 
-    public static long largestRectangle(List<Integer> h) {
-        // Write your code here
-        Stack<Integer> stack = new Stack<>();
-        long maxArea = 0;
-        int n = h.size();
+   public static long largestRectangle(List<Integer> h) {
+    Stack<Integer> stack = new Stack<>();
+    long maxArea = 0;
+    int n = h.size();
 
-        for (int i = 0; i <= n; i++) {
-            int currentHeight = (i == n) ? 0 : h.get(i);
-
-            while (!stack.isEmpty() && currentHeight < h.get(stack.peek())) {
-                int height = h.get(stack.pop());
-                int width = stack.isEmpty() ? i : i - stack.peek() - 1;
-                long area = (long) height * width;
-                maxArea = Math.max(maxArea, area);
-            }
-
-            stack.push(i);
+    int i = 0;
+    while (i < n) {
+        if (stack.isEmpty() || h.get(i) >= h.get(stack.peek())) {
+            stack.push(i++);
+        } else {
+            int top = stack.pop();
+            long height = h.get(top);
+            long width = stack.isEmpty() ? i : i - stack.peek() - 1;
+            maxArea = Math.max(maxArea, height * width);
         }
+    }
 
-        return maxArea;
+    while (!stack.isEmpty()) {
+        int top = stack.pop();
+        long height = h.get(top);
+        long width = stack.isEmpty() ? i : i - stack.peek() - 1;
+        maxArea = Math.max(maxArea, height * width);
+    }
+
+    return maxArea;
     }
 
 }
@@ -39,11 +51,13 @@ class Result {
 public class Solution23 {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(System.out));
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int n = Integer.parseInt(bufferedReader.readLine().trim());
 
         List<Integer> h = Stream.of(bufferedReader.readLine().replaceAll("\\s+$", "").split(" "))
-                .map(Integer::parseInt)
-                .collect(toList());
+            .map(Integer::parseInt)
+            .collect(toList());
 
         long result = Result.largestRectangle(h);
 
