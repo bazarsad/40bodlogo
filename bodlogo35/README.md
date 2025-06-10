@@ -1,4 +1,4 @@
-## Бодлого-21
+## Бодлого-35
 Бодлогын нэр: Sparse arrays
 
 🔗 Hackerrank холбоос: https://www.hackerrank.com/challenges/sparse-arrays/problem?isFullScreen=true
