@@ -14,6 +14,6 @@
 Хэрэв тэгш бол YES
 Хэрэв сондгой бол NO
 - Инверс гэдэг нь arr[i] > arr[j] (i < j) нөхцөл биелж байгаа хосуудын тоо юм.
-- 
+
 #### Hackerrank-ийн амжилтын screenshot:
 ![Screenshot 2025-06-10 134430](https://github.com/user-attachments/assets/8c92077c-d7e9-4dea-9d2e-c064f5127d8c)
