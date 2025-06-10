@@ -13,6 +13,6 @@ Floyd's Cycle Detection (Tortoise and Hare):
 - Хэрэв тэд уулзвал мөчлөг байна
 - Цаг хугацааны нарийвчлал: O(n)
 - Санах ойн нарийвчлал: O(1)
-- 
+
 #### Hackerrank-ийн амжилтын screenshot:
 ![Screenshot 2025-06-10 142916](https://github.com/user-attachments/assets/0fefbc9f-32bb-4bb6-8f6f-58d6adfae93f)
