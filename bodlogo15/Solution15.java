@@ -1,51 +1,47 @@
 import java.util.*;
-public class Solution {
 
-    public static String gridSearch(List<String> G, List<String> P) {
-        int R = G.size();
-        int C = G.get(0).length();
-        int r = P.size();
-        int c = P.get(0).length();
+public class Solution15 {
+    public static int surfaceArea(List<List<Integer>> A) {
+        int h = A.size();
+        int w = A.get(0).size();
+        int area = 0;
 
-        for (int i = 0; i <= R - r; i++) {
-            for (int j = 0; j <= C - c; j++) {
-                boolean match = true;
-                for (int x = 0; x < r; x++) {
-                    if (!G.get(i + x).substring(j, j + c).equals(P.get(x))) {
-                        match = false;
-                        break;
-                    }
-                }
-                if (match) return "YES";
+        for (int i = 0; i < h; i++) {
+            for (int j = 0; j < w; j++) {
+                int current = A.get(i).get(j);
+                if (current > 0) area += 2;
+
+                int up = i == 0 ? 0 : A.get(i - 1).get(j);
+                int down = i == h - 1 ? 0 : A.get(i + 1).get(j);
+                int left = j == 0 ? 0 : A.get(i).get(j - 1);
+                int right = j == w - 1 ? 0 : A.get(i).get(j + 1);
+
+                area += Math.max(current - up, 0);
+                area += Math.max(current - down, 0);
+                area += Math.max(current - left, 0);
+                area += Math.max(current - right, 0);
             }
         }
-        return "NO";
+
+        return area;
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int T = Integer.parseInt(scanner.nextLine());
+        int H = scanner.nextInt();
+        int W = scanner.nextInt();
 
-        for (int t = 0; t < T; t++) {
-            String[] dimsG = scanner.nextLine().split(" ");
-            int R = Integer.parseInt(dimsG[0]);
-
-            List<String> G = new ArrayList<>();
-            for (int i = 0; i < R; i++) {
-                G.add(scanner.nextLine());
+        List<List<Integer>> A = new ArrayList<>();
+        for (int i = 0; i < H; i++) {
+            List<Integer> row = new ArrayList<>();
+            for (int j = 0; j < W; j++) {
+                row.add(scanner.nextInt());
             }
-
-            String[] dimsP = scanner.nextLine().split(" ");
-            int r = Integer.parseInt(dimsP[0]);
-
-            List<String> P = new ArrayList<>();
-            for (int i = 0; i < r; i++) {
-                P.add(scanner.nextLine());
-            }
-
-            String result = gridSearch(G, P);
-            System.out.println(result);
+            A.add(row);
         }
+
+        int result = surfaceArea(A);
+        System.out.println(result);
         scanner.close();
     }
 }
